@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title><%= title%></title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+    <div>
+        <div><h1>Sign Up</h1></div>
+        <div>
+            <form action="/create" method="POST">
+                <label class="form-label" for="name" style="margin: 10px 0 0 -86px;font-weight: bold;">Enter Name:</label>
+                <input type="text" name="name" placeholder="enter name">
+                <label class="form-label" for="email" style="margin: 10px 0 0 -86px;font-weight: bold;">Enter Email:</label>
+                <input type="email" name="email" placeholder="enter email">
+                <label class="form-label" for="password" style="margin: 10px 0 0 -60px;font-weight: bold;">Enter Password:</label>
+                <input type="password" name="password" placeholder="enter password">
+                <label class="form-label" for="confrom_password" style="margin: 10px 0 0 -37px;font-weight: bold;">Re-Enter password:</label>
+                <input type="password" name="confrom_password" placeholder="confrom password">
+                <input type="submit" value="Sigh Up">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

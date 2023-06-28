@@ -1,0 +1,24 @@
+
+<html>
+<head>
+    <title><%= title%></title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body><div id="body1">
+        <div><h1>Sign In</h1></div>
+        
+        <div>
+            <form action="/createsession" method="post">
+            <label class="form-label" for="email" style="margin: 10px 0 0 -86px;font-weight: bold;">Enter Email:</label>
+            <input type="email" name="email" placeholder="enter email">
+            <label class="form-label" for="password" style="margin: 10px 0 0 -61px;font-weight: bold;">Enter Password:</label>
+            <input type="password" name="password" placeholder="enter password">
+            <input type="submit" value="login">
+        </form>
+        </div>
+        <div>
+            <p>Don't have account <a href="/signup">Sign Up</a></p>
+        </div>
+    </div>
+</body>
+</html>

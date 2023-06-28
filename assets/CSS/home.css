@@ -1,0 +1,73 @@
+header{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    background-color: coral;
+    margin: 0px;
+    align-items: center;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+header h3{
+    margin: 0px 310px 0px 0px;
+}
+header div{
+    display: flex;
+    flex-direction: row;
+}
+header div h4{
+    margin: 0px 80px 0px 10px;
+}
+table, tbody,th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+#button{
+    height: 40px;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    margin: 5% 0px 5% 72%;
+    border-radius: 10px;
+}
+#button a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bolder;
+
+}
+#company{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+div{
+    display: flex;
+    justify-content: center;    
+}
+th{
+    min-width: 100px;
+    height: 50px;
+    background-color: coral; 
+    font-family:sans-serif;
+}
+td{
+    width: auto;
+    height: 50px;
+    font-size: 1.2rem;
+    text-align:center;
+}
+.delete-button{
+    font-family:sans-serif;
+    font-weight: 700;
+}
+.delete-button:hover{
+    background-color:red;
+    color:white;
+}

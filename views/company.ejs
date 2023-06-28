@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/home.css">
+</head>
+<body>
+    <%- include('header') %>
+    <div id="company">
+        <h1 style="margin: 40px 17%;">company</h1>
+        <div id="button" style="margin: 40px 17%;">
+            <a href="/company/allocate" type="button" class="btn btn-success align-self-center" style="font-family: sans-serif;">Allocate Interview</a>
+        </div>
+    </div>
+    <div>
+        <%if(students.length>0){%>
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Company</th>
+                    <th scope="col">Student</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Contact</th>
+                    <th scope="col">Batch</th>
+                    <th scope="col">InterviewDate</th>
+                    <th scope="col">Result</th>
+                </tr>
+            </thead>
+
+            <tbody id="myTable">
+                <% for(let student of students){%> 
+                <%i=0%>
+                <% while(i< student.interviews.length){%>
+                <tr class="row-ref">
+                    <th scope="row"><%=student.interviews[i].company%></th>
+                    <td><%=student.name%></td>
+                    <td><%=student.email%></td>
+                    <td><%=student.contect%></td>
+                    <td><%=student.batch%></td>
+                    <td><%=student.interviews[i].date%></td>
+                    <td>
+                        <%=student.interviews[i].result%>
+                        <select class="form-select" aria-label="Default select example" name="companyResult" id="status" style="min-width: 130px">
+                            <option selected id="delete-options"><%=student.interviews[i].result%></option>
+                            <option value="Selected">Selected</option>
+                            <option value="Not Selected">Not Selected</option>
+                            <option value="On Hold">On Hold</option>
+                            <option value="Pending">Pending</option>
+                        </select>
+
+                        <button type="submit">Update</button>
+                    </td>
+                </tr>
+                <%i++%>
+                <%}%>
+                <%}%>
+            </tbody>
+        </table>
+        <%}else{%>
+            <h2>No Record Found</h2>
+        <%}%>
+    </div>
+</body>
+</html>

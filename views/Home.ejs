@@ -1,0 +1,67 @@
+<html>
+<head>
+    <title><%= title%></title>
+    <link rel="stylesheet" href="/CSS/home.css">
+</head>
+<body>
+    <%- include('header'); %>
+    <div id="button">
+        <a href="/student/studentprofile" type="button" class="btn btn-success align-self-center" style="font-family: sans-serif;">+ Add Student</a>
+    </div>
+    <div>
+        <%if(all_users.length>0){%>
+    <table>
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Batch</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Contact</th>
+                <th scope="col">DSA</th>
+                <th scope="col">WEB</th>
+                <th scope="col">REACT</th>
+                <th scope="col">Interview</th>
+                <th scope="col" class="text-end">Action</th>
+            </tr>
+        </thead>
+        
+   
+
+    
+    <thead>
+        
+        <% for(u of all_users){%>
+            
+            <tr>
+                <td><%= u.batch%></u></td>
+                <td><%= u.name%></td>
+                <td><%= u.email%></td>
+                <td><%= u.contect%></td>
+                <td><%= u.dsa%></td>
+                <td><%= u.batch%></td>
+                <td><%= u.react%></td>
+                <% if(u.interviews.length) {%>
+                    <td>
+                        <% for(let company of u.interviews){%>
+                        <a href=" " id="compnay_name"><%=company.company%></a>
+                        <%}%>
+                    </td>
+                    <%}else{%>
+                    <td>NONE</td>
+                    <%}%>
+                    <td style="display: flex; justify-content: space-around; align-items: center" class="delete-button">
+                        <a href="/student/delete/<%=u.id%>" type="button">Delete</a>
+                    </td>
+                </tr>
+                <%}%>
+            </tr>
+        
+            
+    </thead>
+ </table>
+<%}else{%>
+    <h2>No Records Found</h2>
+<%}%>
+</div>
+</body>
+</html>
